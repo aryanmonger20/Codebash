@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Plain-Regular';
+    src: url('../fonts/Plain-Regular.woff2') format('woff2'),
+        url('../fonts/Plain-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plain-Light';
+    src: url('../fonts/Plain-Light.woff2') format('woff2'),
+        url('../fonts/Plain-Light.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Plain-Bold';
+    src: url('../fonts/Plain-Bold.woff2') format('woff2'),
+        url('../fonts/Plain-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+  --primary-color:        #693c72;
+  --secondary-color:      #f1c111;
+  --white-color:          #ffffff;
+  --dark-color:           #171819;
+  --project-bg:           #f0f8ff;
+  --menu-bg:              #72523c;
+  --navlinkCol:
+
+  --title-color:          #15141a;
+  --gray-color:           #909090;
+  --link-color:           #404040;
+  --p-color:              #666262;
+
+  --base-font-family:     'Plain-Light', sans-serif;
+  --title-font-family:    'Plain-Regular', sans-serif;
+  --font-bold-family:     'Plain-Bold', sans-serif;
+  --font-weight-bold:     bold;
+
+  --h1-font-size:         52px;
+  --h2-font-size:         32px;
+  --h3-font-size:         30px;
+  --p-font-size:          18px;
+  --base-font-size:       16px;
+  --menu-font-size:       16px;
+
+  --border-radius-large:  90px;
+  --border-radius-small:  5px;
+  
+}
+
+body {
+  background: var(--white-color);
+  font-family: var(--base-font-family);
+}
+
+
+.navbar {
+    background: var(--menu-bg);
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 1.1;
+  }
+
+  .navbar-brand {
+    color: var(--white-color);
+    font-size: var(--h2-font-size);
+  }
+  .navbar-brand:hover {
+    color: var(--secondary-color);
+  }
+  .nav-link {
+    color: var(--white-color);
+    font-size: var(--menu-font-size);
+    letter-spacing: 0.4px;
+    margin: 0 1.2em;
+    padding: 0.6em;
+  }
+
+  .nav-link.active,
+  .nav-link:hover {
+    color: var(--secondary-color);
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link.contact {
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius-large);
+    color: var(--secondary-color);
+    font-family: var(--font-bold-family);
+    padding: 0.6em 2em 0.8em 2em;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link.contact:hover,
+  .navbar-expand-lg .navbar-nav .nav-link.contact.active {
+    background: #693c72;
+    color: var(--white-color);
+  }
+
+  .navbar-nav .navbar-toggler-icon {
+    background: none;
+  }
+
+  .navbar-toggler {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    width: 30px;
+    height: 35px;
+    outline: none;
+  }
+
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background: transparent;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before,
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+    transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+    top: 0;
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+  }
+
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+  }
+
+  .navbar-toggler .navbar-toggler-icon {
+    background: var(--white-color);
+    transition: background 10ms 300ms ease;
+    display: block;
+    width: 30px;
+    height: 2px;
+    position: relative;
+  }
+
+  .navbar-toggler .navbar-toggler-icon::before,
+  .navbar-toggler .navbar-toggler-icon::after {
+    transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
+    transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+    transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background: var(--white-color);
+    width: 30px;
+    height: 2px;
+    content: '';
+  }
+
+  .navbar-toggler .navbar-toggler-icon::before {
+    top: -8px;
+  }
+
+  .navbar-toggler .navbar-toggler-icon::after {
+    top: 8px;
+  }
+
+

@@ -1,183 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>CodeBash</title>
 
-     <title>CodeBash</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
 
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="">
-     <meta name="keywords" content="">
-     <meta name="author" content="">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 
-     <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/aos.css">
-     <link rel="stylesheet" href="css/owl.carousel.min.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css"
+      integrity="sha512-RWhcC19d8A3vE7kpXq6Ze4GcPfGe3DQWuenhXAbcGiZOaqGojLtWwit1eeM9jLGHFv8hnwpX3blJKGjTsf2HxQ=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css"
+      integrity="sha512-X/RSQYxFb/tvuz6aNRTfKXDnQzmnzoawgEQ4X8nZNftzs8KFFH23p/BA6D2k0QCM4R0sY1DEy9MIY9b3fwi+bg=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css"
+      integrity="sha512-f28cvdA4Bq3dC9X9wNmSx21rjWI+5piIW/uoc2LuQ67asKxfQjUow2MkcCNcfJiaLrHcGbed1wzYe3dlY4w9gA=="
+      crossorigin="anonymous"
+    />
 
-
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" />     
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" integrity="sha512-RWhcC19d8A3vE7kpXq6Ze4GcPfGe3DQWuenhXAbcGiZOaqGojLtWwit1eeM9jLGHFv8hnwpX3blJKGjTsf2HxQ==" crossorigin="anonymous" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" integrity="sha512-X/RSQYxFb/tvuz6aNRTfKXDnQzmnzoawgEQ4X8nZNftzs8KFFH23p/BA6D2k0QCM4R0sY1DEy9MIY9b3fwi+bg==" crossorigin="anonymous" />
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" integrity="sha512-f28cvdA4Bq3dC9X9wNmSx21rjWI+5piIW/uoc2LuQ67asKxfQjUow2MkcCNcfJiaLrHcGbed1wzYe3dlY4w9gA==" crossorigin="anonymous" />
-     
-     
-     <!-- MAIN CSS -->
-     <link rel="stylesheet" href="css/main.css">
-
-</head>
-<body>
-
-     <!-- MENU BAR -->
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- MENU BAR -->
     <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-              <i class="fa fa-line-chart"></i>
-            CodeBash
-            </a>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fa fa-line-chart"></i>
+          CodeBash
+        </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link smoothScroll">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#howWorks" class="nav-link smoothScroll">How to Join</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#project" class="nav-link smoothScroll">Upcoming Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link smoothScroll">Contact</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#about" class="nav-link smoothScroll">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#howWorks" class="nav-link smoothScroll">How to Join</a>
+            </li>
+            <li class="nav-item">
+              <a href="#project" class="nav-link smoothScroll"
+                >Upcoming Events</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link smoothScroll">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
+    <!-- HERO -->
+    <section
+      class="hero hero-bg d-flex justify-content-center align-items-center"
+    >
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="hero-text">
+              <h1 class="text-white" data-aos="fade-up">Welcome Coders</h1>
+              <h2 class="text-white" data-aos="fade-up">
+                Wanna Keep Up with all the upcoming Coding Events?
+              </h2>
 
-     <!-- HERO -->
-     <section class="hero hero-bg d-flex justify-content-center align-items-center">
-               <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
-                              <div class="hero-text">
-
-                                   <h1 class="text-white" data-aos="fade-up">Welcome Coders</h1>
-                                   <h2 class="text-white" data-aos="fade-up">Wanna Keep Up with all the upcoming Coding Events</h2>
-
-                                   <a href="http://m.me/codebash" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Join Now</a>
-
-                              </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                          <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
-
-                            <img src="images/working-girl.png" class="img-fluid" alt="working girl">
-                          </div>
-                        </div>
-
-                    </div>
-               </div>
-     </section>
-
-
-     <!-- ABOUT -->
-     <section class="about section-padding pb-0" id="about">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-lg-8 mx-auto col-md-10 col-12">
-                         <div class="about-info">
-
-                              <h1  data-aos="fade-up">Get <strong>info of all upcoming coding events</strong> at your fingertips</h1>
-
-                              <p class="mb-0" data-aos="fade-up">CodeBash is a facebook messenger bot in the form of a facebook page which helps  us to get notified about all the Hackathons,Coding Contest etc happening across platform like CodeChef, HackerEarth, Codeforces.Users can get CP ratings of any user from inside messenger by sending the username to the bot . You don't even need to visit their website , it all can be done by using Facebook messenger.
-                                   Just <a href="http://m.me/codebash">SignUp </a>and get all the notifications beforehand !!
-                              </p>
-                         </div>
-
-                         <div class="about-image" data-aos="fade-up" data-aos-delay="200">
-
-                          <img src="images/programmer-is-working-software-cartoon-flat-illustration-freelance-web-developer-with-computer-isolated_97231-152.jpeg" class="img-fluid" alt="office">
-                        </div>
-                    </div>
-
-               </div>
+              <a
+                href="http://m.me/codebash"
+                class="custom-btn btn-bg btn mt-3"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                >Join Now</a
+              >
+            </div>
           </div>
-     </section>
 
-     
-     <!-- how works -->
-     <section class="howpage section-padding" id="howWorks">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-lg-6 col-md-5 col-12">
-                        <div class="contactimg" data-aos="fade-up">
-
-                          <img src="images/programmer-with-code-thinking-vector-34397241.jpeg" class="img-fluid contactimg" alt="website">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-7 col-12">
-                      <h1 class="my-5 pt-3" data-aos="fade-up" data-aos-delay="100">How to Join</h1>
-
-                      <div class="quote" data-aos="fade-up" data-aos-delay="200"></div>
-
-                      <h4 class="mb-4" data-aos="fade-up" data-aos-delay="300">
-                         <li>You can visit our Facebook page and send a message saying 'Join' to SignUp.</li>
-                        <li>Or Click  <strong><a href="http://m.me/codebash"> here</a></strong> and then in messenger Type <strong>"Join"</strong></li> 
-                       <li>  In the Messenger reply the bot with <strong>"Yes"</strong> or <strong>"No" </strong>for the sites you want updates.</li> 
-                       <li>To get <strong>ratings</strong> reply in messenger with<strong>"username"  "website"</strong></li>
-                       <li> To <strong>unsubscribe</strong>  just reply with <strong>"unsubscribe"</strong></li> 
-                      </h4>
-
-                    </div>
-
-               </div>
+          <div class="col-lg-6 col-12">
+            <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+              <img
+                src="images/working-girl.png"
+                class="img-fluid"
+                alt="working girl"
+              />
+            </div>
           </div>
-     </section>
+        </div>
+      </div>
+    </section>
 
+    <!-- ABOUT -->
+    <section class="about section-padding pb-0" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto col-md-10 col-12">
+            <div class="about-info">
+              <h1 data-aos="fade-up">
+                Get <strong>info of all upcoming coding events</strong> at your
+                fingertips
+              </h1>
 
+              <p class="mb-0" data-aos="fade-up">
+                CodeBash is a facebook messenger bot in the form of a facebook
+                page which helps us to get notified about all the
+                Hackathons,Coding Contest etc happening across platform like
+                CodeChef, HackerEarth, Codeforces.Users can get CP ratings of
+                any user from inside messenger by sending the username to the
+                bot . You don't even need to visit their website , it all can be
+                done by using Facebook messenger. Just
+                <a href="http://m.me/codebash">SignUp </a>and get all the
+                notifications beforehand !!
+              </p>
+            </div>
 
-     <!-- upcoming -->
-     <section class="upcoming section-padding" id="project">
-          <div class="container-fluid">
-               <div class="row">
-
-                    <div class="col-lg-12 col-12">
-
-                        <h2 class="mb-5 text-center" data-aos="fade-up">
-                           Take a look through the
-                            <strong>Upcoming Events</strong>
-                        </h2>
-                    </div>        
-               </div>
+            <div class="about-image" data-aos="fade-up" data-aos-delay="200">
+              <img
+                src="images/programmer-is-working-software-cartoon-flat-illustration-freelance-web-developer-with-computer-isolated_97231-152.jpeg"
+                class="img-fluid"
+                alt="office"
+              />
+            </div>
           </div>
-     </section>
+        </div>
+      </div>
+    </section>
 
+    <!-- how works -->
+    <section class="howpage section-padding" id="howWorks">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-5 col-12">
+            <div class="contactimg" data-aos="fade-up">
+              <img
+                src="images/programmer-with-code-thinking-vector-34397241.jpeg"
+                class="img-fluid contactimg"
+                alt="website"
+              />
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-7 col-12">
+            <h1 class="my-5 pt-3" data-aos="fade-up" data-aos-delay="100">
+              How to Join
+            </h1>
+
+            <div class="quote" data-aos="fade-up" data-aos-delay="200"></div>
+
+            <h4 class="mb-4" data-aos="fade-up" data-aos-delay="300">
+              <li>
+                You can visit our Facebook page and send a message saying 'Join'
+                to SignUp.
+              </li>
+              <li>
+                Or Click
+                <strong><a href="http://m.me/codebash"> here</a></strong> and
+                then in messenger Type <strong>"Join"</strong>
+              </li>
+              <li>
+                In the Messenger reply the bot with <strong>"Yes"</strong> or
+                <strong>"No" </strong>for the sites you want updates.
+              </li>
+              <li>
+                To get <strong>ratings</strong> reply in messenger with<strong
+                  >"username" "website"</strong
+                >
+              </li>
+              <li>
+                To <strong>unsubscribe</strong> just reply with
+                <strong>"unsubscribe"</strong>
+              </li>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- upcoming -->
+    <section class="upcoming section-padding" id="project">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 col-12">
+            <h2 class="mb-5 text-center" data-aos="fade-up">
+              Take a look through the
+              <strong>Upcoming Events</strong>
+            </h2>
+            <div class="container-fluid">
+              <div class="card-deck">
+                <div class="card">
+                  <!-- <img src="..." class="card-img-top" alt="..."> -->
+                  <div class="card-body">
+                    <h5 class="card-title">Codeforces events</h5>
+                    <p class="card-text" id="codeforces_events"></p>
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                  </div>
+                </div>
+                <div class="card">
+                  <!-- <img src="..." class="card-img-top" alt="..."> -->
+                  <div class="card-body">
+                    <h5 class="card-title">Codechef events</h5>
+                    <p class="card-text" id="codechef_events"></p>
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                  </div>
+                </div>
+                <div class="card">
+                  <!-- <img src="..." class="card-img-top" alt="..."> -->
+                  <div class="card-body">
+                    <h5 class="card-title">Hackerearth events</h5>
+                    <p class="card-text" id="hackerearth_events"></p>
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="site-footer" id="contact">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-6 mx-lg-auto col-md-8 col-10">
-            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100"><strong>Thanks </strong>for the Visit.</h1>
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">
+              <strong>Thanks </strong>for the Visit.
+            </h1>
           </div>
 
-          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="col-lg-3 col-md-6 col-12"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <h4 class="my-4">GitHub Link</h4>
 
             <p>
@@ -188,39 +291,133 @@
             </p>
           </div>
 
-          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+          <div
+            class="col-lg-3 col-md-6 col-12"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <h4 class="my-4">Team</h4>
 
             <h4 class="team">
-              <li><a href="https://github.com/ishaanmehta4">Ishaan Mehta</a></li>
-              <li><a href="https://github.com/koderharsh">Harsh Tripathi</a></li>
-              <li><a href="https://github.com/aryanmonger20">Aryan Gupta</a></li>
-
-          
+              <li>
+                <a href="https://github.com/ishaanmehta4">Ishaan Mehta</a>
+              </li>
+              <li>
+                <a href="https://github.com/koderharsh">Harsh Tripathi</a>
+              </li>
+              <li>
+                <a href="https://github.com/aryanmonger20">Aryan Gupta</a>
+              </li>
             </h4>
           </div>
-
-          
-
-         
-
-
         </div>
       </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/contests.js"></script>
 
+    <!-- SCRIPTS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
 
-     <!-- SCRIPTS -->
-     <script src="js/jquery.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/aos.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/custom.js"></script>
+    <script>
+      async function getEvents1(platform) {
+        document.getElementById(platform + "_events").innerHTML = "";
+        let res = await fetch("/events/" + platform);
+        res = await res.json();
+        if (res[0].Error) {
+          res[0].Name = res[0].Error;
+          res[0].url = "";
+        }
+        console.log(platform, res);
+        return res;
+      }
+      async function getEvents2(platform) {
+        document.getElementById(platform + "_events").innerHTML = "";
+        let res = await fetch("/events/" + platform);
+        res = await res.json();
+        if (res[0].Error) {
+          res[0].Name = res[0].Error;
+          res[0].url = "";
+        }
+        console.log(platform, res);
+        return res;
+      }
+      async function getEvents3(platform) {
+        document.getElementById(platform + "_events").innerHTML = "";
+        let res = await fetch("/events/" + platform);
+        res = await res.json();
+        if (res[0].Error) {
+          res[0].Name = res[0].Error;
+          res[0].url = "";
+        }
+        console.log(platform, res);
+        return res;
+      }
 
-</body>
+      getEvents1("codeforces")
+        .then((res1) => {
+          console.log(res1);
+          res1.forEach((event) => {
+            document.getElementById(
+              "codeforces_events"
+              ).innerHTML += `<p style="color: #ffffff90">${event.Name}</p> <a href="${event.url}">${event.url}</a> <br><br>`;
+          });
+        })
+        .catch((err) => {
+          console.log("Hello", err);
+        });
+
+setTimeout(() => {
+  getEvents3("hackerearth")
+    .then((res3) => {
+      console.log(res3);
+      res3.forEach((event) => {
+        document.getElementById(
+          "hackerearth_events"
+          ).innerHTML += `<p style="color: #ffffff90">${event.Name}</p> <a href="${event.url}">${event.url}</a> <br><br>`;
+      });
+    })
+    .catch((err) => {
+      console.log("Hello", err);
+    });
+  
+}, 2000);
+
+setTimeout(() => {
+  getEvents2("codechef")
+    .then((res2) => {
+      console.log(res2);
+      res2.forEach((event) => {
+        document.getElementById(
+          "codechef_events"
+          ).innerHTML += `<p style="color: #ffffff90">${event.Name}</p> <a href="${event.url}">${event.url}</a> <br><br>`;
+      });
+    })
+    .catch((err) => {
+      console.log("Hello", err);
+    });
+  
+}, 4000);
+    </script>
+  </body>
 </html>
